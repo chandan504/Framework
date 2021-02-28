@@ -1,0 +1,17 @@
+[Android_Chandan One+5 INFO ] 2021-02-22 21:43:33.573 ServerManager:30 - Appium server started
+[Android_Chandan One+5 INFO ] 2021-02-22 21:43:33.655 DriverManager:29 - initializing Appium driver
+[Android_Chandan One+5 INFO ] 2021-02-22 21:43:33.724 PropertyManager:18 - loading config properties
+[Android_Chandan One+5 INFO ] 2021-02-22 21:43:33.729 CapabilitiesManager:18 - getting capabilities
+[Android_Chandan One+5 INFO ] 2021-02-22 21:43:52.521 DriverManager:42 - Driver is initialized
+[Android_Chandan One+5 INFO ] 2021-02-22 21:43:56.065 BasePage:71 - login with invalidUsername
+[Android_Chandan One+5 INFO ] 2021-02-22 21:43:59.048 BasePage:71 - password is secret_sauce
+[Android_Chandan One+5 INFO ] 2021-02-22 21:44:01.050 BasePage:54 - press login button
+[Android_Chandan One+5 INFO ] 2021-02-22 21:44:02.179 BasePage:97 - error text is - Username and password do not match any user in this service.
+[Android_Chandan One+5 INFO ] 2021-02-22 21:44:05.055 BasePage:71 - login with standard_user
+[Android_Chandan One+5 INFO ] 2021-02-22 21:44:08.050 BasePage:71 - password is InvalidPaassword
+[Android_Chandan One+5 INFO ] 2021-02-22 21:44:10.052 BasePage:54 - press login button
+[Android_Chandan One+5 INFO ] 2021-02-22 21:44:11.170 BasePage:97 - error text is - Username and password do not match any user in this service.
+[Android_Chandan One+5 INFO ] 2021-02-22 21:44:13.044 BasePage:71 - login with standard_user
+[Android_Chandan One+5 INFO ] 2021-02-22 21:44:16.035 BasePage:71 - password is secret_sauce
+[Android_Chandan One+5 INFO ] 2021-02-22 21:44:17.050 BasePage:54 - press login button
+[Android_Chandan One+5 INFO ] 2021-02-22 21:44:19.985 BasePage:97 - product page title is - PRODUCTS

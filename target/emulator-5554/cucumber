@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cucumber</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<style>
+.cucumber-react .cucumber-status--passed {
+  color: #2CB14A;
+}
+.cucumber-react .cucumber-status--skipped {
+  color: #00A0CC;
+}
+.cucumber-react .cucumber-status--pending {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--undefined {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--ambiguous {
+  color: #F4EBFD;
+}
+.cucumber-react .cucumber-status--failed {
+  color: #BB0000;
+}
+.cucumber-react .cucumber-status--unknown {
+  color: #B6BECB;
+}
+.cucumber-react h1, .cucumber-react h2, .cucumber-react h3 {
+  padding: 0;
+  margin: 0;
+}
+.cucumber-react a {
+  color: inherit;
+}
+.cucumber-react .gherkin-document-list {
+  font: 14px "Open Sans", sans-serif;
+  color: #161C24;
+  background: #fff;
+  overflow-x: hidden;
+}
+.cucumber-react .cucumber-title {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.cucumber-react .cucumber-title__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-title__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-tags {
+  padding: 0;
+  margin-bottom: 0;
+}
+.cucumber-react .cucumber-tags .cucumber-tag {
+  display: inline;
+  list-style-type: none;
+  padding: 4px 8px 4px 8px;
+  margin-right: 6px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+.cucumber-react .cucumber-feature__icon {
+  padding-top: 0.35em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-description,
+.cucumber-react .cucumber-children {
+  margin-left: 1em;
+}
+.cucumber-react .cucumber-feature,
+.cucumber-react .cucumber-rule,
+.cucumber-react .cucumber-scenario,
+.cucumber-react .cucumber-background {
+  margin-bottom: 1em;
+}
+.cucumber-react .cucumber-steps {
+  list-style-type: none;
+  padding-left: 10px;
+}
+.cucumber-react .cucumber-steps .cucumber-step {
+  display: flex;
+}
+.cucumber-react .cucumber-steps .cucumber-step__status {
+  padding-top: 0.2em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-steps .cucumber-step__content {
+  flex-grow: 1;
+}
+.cucumber-react .cucumber-steps .cucumber-step__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-steps .cucumber-step__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-steps .cucumber-step__param {
+  font-weight: normal;
+  font-style: italic;
+}
+.cucumber-react .cucumber-table {
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.cucumber-react .cucumber-table__header-cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell__status {
+  padding: 0.5em 3px 3px 3px;
+}
+.cucumber-react .cucumber-table__cell__step {
+  flex-grow: 1;
+}
+.cucumber-react .cucumber-code {
+  padding: 0.25em;
+  background-color: #ebebeb;
+}
+.cucumber-react .cucumber-error {
+  padding: 0.5em;
+  margin: 0;
+  overflow: scroll;
+}
+.cucumber-react .cucumber-no-documents {
+  font: 14px "Open Sans", sans-serif;
+}
+.cucumber-react .cucumber-attachment {
+  background-color: #ebebeb;
+  padding: 0.5em;
+}
+.cucumber-react .cucumber-attachment__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-attachment__image {
+  margin-top: 1em;
+}
+.cucumber-react .cucumber-anchor {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 0.3em;
+}
+.cucumber-react .cucumber-anchor__link {
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  left: -20px;
+  display: flex;
+  align-items: center;
+}
+.cucumber-react .cucumber-anchor__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-anchor:hover a {
+  opacity: 1;
+  width: max-content;
+  transition: all 0.35s ease-in-out;
+}
+.cucumber-react .cucumber-anchor > * {
+  height: 100%;
+  margin-top: 0px;
+}
+
+.cucumber-report-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font: 11px "Open Sans", sans-serif;
+  margin-bottom: 1em;
+}
+.cucumber-report-header > * {
+  padding: 1em;
+}
+.cucumber-report-header .cucumber-status-filter {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-status-filter table {
+  width: 100%;
+}
+.cucumber-report-header .cucumber-execution-data {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-search-bar {
+  border-right: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search input {
+  padding: 0.4em;
+  border-radius: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search button {
+  height: 2.2em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar p.help {
+  font-size: 80%;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul {
+  display: inline;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li input {
+  display: inline-block;
+  width: auto;
+  height: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li label {
+  padding-right: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-execution-data {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: auto;
+  }
+}
+.accordion {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+    background-color: #f4f4f4;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+.accordion__button:hover {
+    background-color: #ddd;
+}
+
+.accordion__button:before {
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded='true']::before,
+.accordion__button[aria-selected='true']::before {
+    transform: rotate(45deg);
+}
+
+.accordion__panel {
+    padding: 20px;
+    animation: fadein 0.35s ease-in;
+}
+
+	</style>
+</head>
+<body>
+<div id="content">
+</div>
+<script>
+window.CUCUMBER_MESSAGES = [{"meta":{"protocolVersion":"13.2.1","implementation":{"name":"cucumber-jvm","version":"6.9.1"},"runtime":{"name":"OpenJDK 64-Bit Server VM","version":"15.0.1+9-18"},"os":{"name":"Windows 10"},"cpu":{"name":"amd64"}}},{"testRunStarted":{"timestamp":{"seconds":"1614009110","nanos":16610000}}},{"source":{"uri":"file:///C:/Users/Lenovo/OneDrive/Documents/Automation%20Book/Framework/src/test/resources/Login.feature","data":"\r\n@test\r\nFeature: Login scenario\r\n\r\n\r\n\r\n\r\n  Scenario Outline: Login with invalid user name\r\n    When I enter username as \"\u003cusername\u003e\"\r\n    And I enter password as \"\u003cpassword\u003e\"\r\n    And I login\r\n    Then login should fail with an error \"\u003cerr\u003e\"\r\n    Examples:\r\n      | username       | password | err |\r\n      | invalidUsername | secret_sauce | Username and password do not match any user in this service. |\r\n  Scenario Outline: Login With invalid Password\r\n    When I enter username as \"\u003cusername\u003e\"\r\n    And  I enter password as \"\u003cpassword\u003e\"\r\n    And  I login\r\n    Then login should fail with an error \"\u003cerr\u003e\"\r\n    Examples:\r\n      | username      |password      |err   |\r\n      | standard_user | InvalidPaassword | Username and password do not match any user in this service.   |\r\n\r\n  Scenario Outline: Login With valid username and Password\r\n    When I enter username as \"\u003cusername\u003e\"\r\n    And  I enter password as \"\u003cpassword\u003e\"\r\n    And  I login\r\n    Then I should see Products page with title \"\u003ctitle\u003e\"\r\n    Examples:\r\n      | username | password | title |\r\n      | standard_user | secret_sauce | PRODUCTS |\r\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///C:/Users/Lenovo/OneDrive/Documents/Automation%20Book/Framework/src/test/resources/Login.feature","feature":{"location":{"line":3,"column":1},"tags":[{"location":{"line":2,"column":1},"name":"@test","id":"88f0e426-767b-46c7-b99e-2b05ac74fed1"}],"language":"en","keyword":"Feature","name":"Login scenario","children":[{"scenario":{"location":{"line":8,"column":3},"keyword":"Scenario Outline","name":"Login with invalid user name","steps":[{"location":{"line":9,"column":5},"keyword":"When ","text":"I enter username as \"\u003cusername\u003e\"","id":"cebb7908-ae2f-420e-8804-d395d54376eb"},{"location":{"line":10,"column":5},"keyword":"And ","text":"I enter password as \"\u003cpassword\u003e\"","id":"8a371b47-7740-488f-ac01-21224f204cdd"},{"location":{"line":11,"column":5},"keyword":"And ","text":"I login","id":"13b00d12-f733-48c4-9fc7-e4efc4f7874d"},{"location":{"line":12,"column":5},"keyword":"Then ","text":"login should fail with an error \"\u003cerr\u003e\"","id":"3bd99811-9682-4771-9f6f-0a22b2bfbe00"}],"examples":[{"location":{"line":13,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":14,"column":7},"cells":[{"location":{"line":14,"column":9},"value":"username"},{"location":{"line":14,"column":26},"value":"password"},{"location":{"line":14,"column":37},"value":"err"}],"id":"e3321df7-5525-4122-a8b3-1c29f9bad997"},"tableBody":[{"location":{"line":15,"column":7},"cells":[{"location":{"line":15,"column":9},"value":"invalidUsername"},{"location":{"line":15,"column":27},"value":"secret_sauce"},{"location":{"line":15,"column":42},"value":"Username and password do not match any user in this service."}],"id":"076bd1a3-f23a-405d-8e77-995f5d006ce8"}],"id":"20354dca-6fb9-4f80-b1a4-2858885db1ea"}],"id":"652f3892-18a2-4c07-aa23-9f633bf2ee6c"}},{"scenario":{"location":{"line":16,"column":3},"keyword":"Scenario Outline","name":"Login With invalid Password","steps":[{"location":{"line":17,"column":5},"keyword":"When ","text":"I enter username as \"\u003cusername\u003e\"","id":"e896d88c-87b2-4835-8bff-2a4edd78079b"},{"location":{"line":18,"column":5},"keyword":"And ","text":"I enter password as \"\u003cpassword\u003e\"","id":"c205d62a-4387-4e2c-87ca-86c1401e8af5"},{"location":{"line":19,"column":5},"keyword":"And ","text":"I login","id":"29514fb9-c9b5-4ca9-8066-290bdccce79f"},{"location":{"line":20,"column":5},"keyword":"Then ","text":"login should fail with an error \"\u003cerr\u003e\"","id":"7ef4070a-3bad-479d-8814-97614faec724"}],"examples":[{"location":{"line":21,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":22,"column":7},"cells":[{"location":{"line":22,"column":9},"value":"username"},{"location":{"line":22,"column":24},"value":"password"},{"location":{"line":22,"column":39},"value":"err"}],"id":"9f1096c9-a2d1-4390-b0a7-791cc19f2173"},"tableBody":[{"location":{"line":23,"column":7},"cells":[{"location":{"line":23,"column":9},"value":"standard_user"},{"location":{"line":23,"column":25},"value":"InvalidPaassword"},{"location":{"line":23,"column":44},"value":"Username and password do not match any user in this service."}],"id":"6df83cc1-2b21-485f-a785-d57773bdbe9c"}],"id":"cce2f035-4c45-4780-9344-debbd7e2d92d"}],"id":"c49008ec-d57d-4bf6-827b-8f08f7d513f8"}},{"scenario":{"location":{"line":25,"column":3},"keyword":"Scenario Outline","name":"Login With valid username and Password","steps":[{"location":{"line":26,"column":5},"keyword":"When ","text":"I enter username as \"\u003cusername\u003e\"","id":"d2bb02f5-e63f-4d67-8fca-f52c15325589"},{"location":{"line":27,"column":5},"keyword":"And ","text":"I enter password as \"\u003cpassword\u003e\"","id":"6b7f72c3-80cc-4b35-a4e4-7622625ce0f9"},{"location":{"line":28,"column":5},"keyword":"And ","text":"I login","id":"ed8ab3cd-6dec-4ee9-8f50-bc4594a91970"},{"location":{"line":29,"column":5},"keyword":"Then ","text":"I should see Products page with title \"\u003ctitle\u003e\"","id":"669d4ed5-06b1-43b3-a97c-a5f678293f3c"}],"examples":[{"location":{"line":30,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":31,"column":7},"cells":[{"location":{"line":31,"column":9},"value":"username"},{"location":{"line":31,"column":20},"value":"password"},{"location":{"line":31,"column":31},"value":"title"}],"id":"495a56e7-fdbb-49f9-bb86-a0a085e70d8f"},"tableBody":[{"location":{"line":32,"column":7},"cells":[{"location":{"line":32,"column":9},"value":"standard_user"},{"location":{"line":32,"column":25},"value":"secret_sauce"},{"location":{"line":32,"column":40},"value":"PRODUCTS"}],"id":"1c90426b-ada3-41b8-bee0-05aa98da5e00"}],"id":"02fd2ac0-8ecb-45b8-af53-e449cf9d2ae5"}],"id":"89f4d052-6b76-44c4-82a6-474ff64dab5a"}}]}}},{"pickle":{"id":"0af08e8e-3ee0-4226-bf3b-19b1081fd4bc","uri":"file:///C:/Users/Lenovo/OneDrive/Documents/Automation%20Book/Framework/src/test/resources/Login.feature","name":"Login with invalid user name","language":"en","steps":[{"text":"I enter username as \"invalidUsername\"","id":"47f2c936-2f5b-4ead-b0c6-c8f3410dea8e","astNodeIds":["cebb7908-ae2f-420e-8804-d395d54376eb","076bd1a3-f23a-405d-8e77-995f5d006ce8"]},{"text":"I enter password as \"secret_sauce\"","id":"1942a96a-d8ad-4da8-8fba-28df53226976","astNodeIds":["8a371b47-7740-488f-ac01-21224f204cdd","076bd1a3-f23a-405d-8e77-995f5d006ce8"]},{"text":"I login","id":"26822efc-c7cb-423d-818b-d2c003877c5e","astNodeIds":["13b00d12-f733-48c4-9fc7-e4efc4f7874d","076bd1a3-f23a-405d-8e77-995f5d006ce8"]},{"text":"login should fail with an error \"Username and password do not match any user in this service.\"","id":"9c36dda7-8905-45b0-adc3-40d2eaa57b0f","astNodeIds":["3bd99811-9682-4771-9f6f-0a22b2bfbe00","076bd1a3-f23a-405d-8e77-995f5d006ce8"]}],"tags":[{"name":"@test","astNodeId":"88f0e426-767b-46c7-b99e-2b05ac74fed1"}],"astNodeIds":["652f3892-18a2-4c07-aa23-9f633bf2ee6c","076bd1a3-f23a-405d-8e77-995f5d006ce8"]}},{"pickle":{"id":"4fc169e8-85c5-4cd9-878f-7744d85ae98c","uri":"file:///C:/Users/Lenovo/OneDrive/Documents/Automation%20Book/Framework/src/test/resources/Login.feature","name":"Login With invalid Password","language":"en","steps":[{"text":"I enter username as \"standard_user\"","id":"bac5f22a-6131-4aee-a332-08c82947ef9d","astNodeIds":["e896d88c-87b2-4835-8bff-2a4edd78079b","6df83cc1-2b21-485f-a785-d57773bdbe9c"]},{"text":"I enter password as \"InvalidPaassword\"","id":"2a80b6b5-0f3c-404c-a686-d5c4b8b42602","astNodeIds":["c205d62a-4387-4e2c-87ca-86c1401e8af5","6df83cc1-2b21-485f-a785-d57773bdbe9c"]},{"text":"I login","id":"a61f329d-9d07-4270-b3fc-100c8069cd26","astNodeIds":["29514fb9-c9b5-4ca9-8066-290bdccce79f","6df83cc1-2b21-485f-a785-d57773bdbe9c"]},{"text":"login should fail with an error \"Username and password do not match any user in this service.\"","id":"bd81bbd4-6f79-4a4d-81ab-c0b3e530e3aa","astNodeIds":["7ef4070a-3bad-479d-8814-97614faec724","6df83cc1-2b21-485f-a785-d57773bdbe9c"]}],"tags":[{"name":"@test","astNodeId":"88f0e426-767b-46c7-b99e-2b05ac74fed1"}],"astNodeIds":["c49008ec-d57d-4bf6-827b-8f08f7d513f8","6df83cc1-2b21-485f-a785-d57773bdbe9c"]}},{"pickle":{"id":"231e5b6d-24ee-487e-89ac-6f0532f6d17e","uri":"file:///C:/Users/Lenovo/OneDrive/Documents/Automation%20Book/Framework/src/test/resources/Login.feature","name":"Login With valid username and Password","language":"en","steps":[{"text":"I enter username as \"standard_user\"","id":"8f8cb24d-2186-4aff-8d38-d273382a1be1","astNodeIds":["d2bb02f5-e63f-4d67-8fca-f52c15325589","1c90426b-ada3-41b8-bee0-05aa98da5e00"]},{"text":"I enter password as \"secret_sauce\"","id":"30b7a898-5315-4e5f-bf6b-8420bb2ff3ee","astNodeIds":["6b7f72c3-80cc-4b35-a4e4-7622625ce0f9","1c90426b-ada3-41b8-bee0-05aa98da5e00"]},{"text":"I login","id":"a1afe113-755c-4dae-afcf-1f953e840b15","astNodeIds":["ed8ab3cd-6dec-4ee9-8f50-bc4594a91970","1c90426b-ada3-41b8-bee0-05aa98da5e00"]},{"text":"I should see Products page with title \"PRODUCTS\"","id":"46f252be-97ac-4e01-b58c-2620fd58eec6","astNodeIds":["669d4ed5-06b1-43b3-a97c-a5f678293f3c","1c90426b-ada3-41b8-bee0-05aa98da5e00"]}],"tags":[{"name":"@test","astNodeId":"88f0e426-767b-46c7-b99e-2b05ac74fed1"}],"astNodeIds":["89f4d052-6b76-44c4-82a6-474ff64dab5a","1c90426b-ada3-41b8-bee0-05aa98da5e00"]}},{"source":{"uri":"file:///C:/Users/Lenovo/OneDrive/Documents/Automation%20Book/Framework/src/test/resources/Products.feature","data":"@test2\nFeature: Product scenarios\n\n  Scenario Outline: Validate product info on Products page\n    Given I\u0027m logged in\n    Then the product is listed with title \"\u003ctitle\u003e\" and price \"\u003cprice\u003e\"\n    Examples:\n      | title                   | price |\n      | Sauce Labs Bolt T-Shirt | $15.99 |\n#      | Sauce Labs Onesie       | $7.99  |\n#      | Test.allTheThings() T-Shirt (Red) | $15.99 |\n#      | Sauce Labs Backpack     | $29.99 |\n\n  Scenario Outline: Validate product info on Product Details page\n    Given I\u0027m logged in\n    When I click product title \"\u003ctitle\u003e\"\n    Then I should be on product details page with title \"\u003ctitle\u003e\", price \"\u003cprice\u003e\" and description \"\u003cdescription\u003e\"\n    Examples:\n      | title                   | price  | description |\n      | Sauce Labs Backpack     | $29.99 | carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection. |\n #     | Sauce Labs Bolt T-Shirt | $15.99 | Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt. |","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///C:/Users/Lenovo/OneDrive/Documents/Automation%20Book/Framework/src/test/resources/Products.feature","feature":{"location":{"line":2,"column":1},"tags":[{"location":{"line":1,"column":1},"name":"@test2","id":"49bea401-803c-420b-b113-d518994c4519"}],"language":"en","keyword":"Feature","name":"Product scenarios","children":[{"scenario":{"location":{"line":4,"column":3},"keyword":"Scenario Outline","name":"Validate product info on Products page","steps":[{"location":{"line":5,"column":5},"keyword":"Given ","text":"I\u0027m logged in","id":"2734e705-9786-4746-832d-9ceed0ca1809"},{"location":{"line":6,"column":5},"keyword":"Then ","text":"the product is listed with title \"\u003ctitle\u003e\" and price \"\u003cprice\u003e\"","id":"c6b95d9d-ed68-4e18-845e-89410a410c4c"}],"examples":[{"location":{"line":7,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":8,"column":7},"cells":[{"location":{"line":8,"column":9},"value":"title"},{"location":{"line":8,"column":35},"value":"price"}],"id":"017c79d5-8bc4-4c14-bf10-a01793cdd0c2"},"tableBody":[{"location":{"line":9,"column":7},"cells":[{"location":{"line":9,"column":9},"value":"Sauce Labs Bolt T-Shirt"},{"location":{"line":9,"column":35},"value":"$15.99"}],"id":"a0d6e1e5-4f3c-48d0-8f9c-31a6b67d0209"}],"id":"009ec45a-76f7-49ef-a9f3-e4464757b85f"}],"id":"cd4d9196-fd01-46bb-82b8-151c702ae43b"}},{"scenario":{"location":{"line":14,"column":3},"keyword":"Scenario Outline","name":"Validate product info on Product Details page","steps":[{"location":{"line":15,"column":5},"keyword":"Given ","text":"I\u0027m logged in","id":"74e91962-dc89-4f1e-8c17-61a62bc72f07"},{"location":{"line":16,"column":5},"keyword":"When ","text":"I click product title \"\u003ctitle\u003e\"","id":"fa2f3458-5397-4bd2-9eb8-c700b0368386"},{"location":{"line":17,"column":5},"keyword":"Then ","text":"I should be on product details page with title \"\u003ctitle\u003e\", price \"\u003cprice\u003e\" and description \"\u003cdescription\u003e\"","id":"cfa2e364-619b-4926-9491-2a4b1d6f007c"}],"examples":[{"location":{"line":18,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":19,"column":7},"cells":[{"location":{"line":19,"column":9},"value":"title"},{"location":{"line":19,"column":35},"value":"price"},{"location":{"line":19,"column":44},"value":"description"}],"id":"0e5287b0-e495-46c5-87ae-6659ec12e090"},"tableBody":[{"location":{"line":20,"column":7},"cells":[{"location":{"line":20,"column":9},"value":"Sauce Labs Backpack"},{"location":{"line":20,"column":35},"value":"$29.99"},{"location":{"line":20,"column":44},"value":"carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection."}],"id":"79cf50f5-9e80-4749-9399-5c2103b567f7"}],"id":"95d1cbb1-c572-43ed-a61e-e22a5df1e972"}],"id":"91a8ca2e-7767-4ed4-aeb7-89c6849bf481"}}]},"comments":[{"location":{"line":10,"column":1},"text":"#      | Sauce Labs Onesie       | $7.99  |"},{"location":{"line":11,"column":1},"text":"#      | Test.allTheThings() T-Shirt (Red) | $15.99 |"},{"location":{"line":12,"column":1},"text":"#      | Sauce Labs Backpack     | $29.99 |"},{"location":{"line":21,"column":1},"text":" #     | Sauce Labs Bolt T-Shirt | $15.99 | Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt. |"}]}},{"pickle":{"id":"1162becd-5a09-490e-ab66-461fffe42bfc","uri":"file:///C:/Users/Lenovo/OneDrive/Documents/Automation%20Book/Framework/src/test/resources/Products.feature","name":"Validate product info on Products page","language":"en","steps":[{"text":"I\u0027m logged in","id":"c9c40cab-c14f-4db6-8aa1-ab8acae75ae9","astNodeIds":["2734e705-9786-4746-832d-9ceed0ca1809","a0d6e1e5-4f3c-48d0-8f9c-31a6b67d0209"]},{"text":"the product is listed with title \"Sauce Labs Bolt T-Shirt\" and price \"$15.99\"","id":"26fd0126-50ae-4b31-8a49-da82fbda8485","astNodeIds":["c6b95d9d-ed68-4e18-845e-89410a410c4c","a0d6e1e5-4f3c-48d0-8f9c-31a6b67d0209"]}],"tags":[{"name":"@test2","astNodeId":"49bea401-803c-420b-b113-d518994c4519"}],"astNodeIds":["cd4d9196-fd01-46bb-82b8-151c702ae43b","a0d6e1e5-4f3c-48d0-8f9c-31a6b67d0209"]}},{"pickle":{"id":"ab22c827-5c54-4982-ac8f-262da951bdae","uri":"file:///C:/Users/Lenovo/OneDrive/Documents/Automation%20Book/Framework/src/test/resources/Products.feature","name":"Validate product info on Product Details page","language":"en","steps":[{"text":"I\u0027m logged in","id":"e7fc4900-08a3-4cfb-92f1-3a84a99496bc","astNodeIds":["74e91962-dc89-4f1e-8c17-61a62bc72f07","79cf50f5-9e80-4749-9399-5c2103b567f7"]},{"text":"I click product title \"Sauce Labs Backpack\"","id":"b954917d-9be0-449c-aae3-f95caec321e2","astNodeIds":["fa2f3458-5397-4bd2-9eb8-c700b0368386","79cf50f5-9e80-4749-9399-5c2103b567f7"]},{"text":"I should be on product details page with title \"Sauce Labs Backpack\", price \"$29.99\" and description \"carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.\"","id":"fc282789-b525-444d-a92a-079870da494a","astNodeIds":["cfa2e364-619b-4926-9491-2a4b1d6f007c","79cf50f5-9e80-4749-9399-5c2103b567f7"]}],"tags":[{"name":"@test2","astNodeId":"49bea401-803c-420b-b113-d518994c4519"}],"astNodeIds":["91a8ca2e-7767-4ed4-aeb7-89c6849bf481","79cf50f5-9e80-4749-9399-5c2103b567f7"]}},{"testCase":{"id":"a26f1fc2-4931-4cc9-9618-e45bf7a2c3f2","pickleId":"1162becd-5a09-490e-ab66-461fffe42bfc","testSteps":[{"id":"23f3fcd1-20e2-4369-ae3b-1ad7fae6f5e3","hookId":"6ed03000-35f2-41b6-8cc2-413d848f996f"},{"id":"70392540-8815-434a-a861-07fec4e31e94","pickleStepId":"c9c40cab-c14f-4db6-8aa1-ab8acae75ae9","stepDefinitionIds":["e1d49810-2775-4bdd-aeb4-d4e07318f8d3"],"stepMatchArgumentsLists":[{}]},{"id":"bdea49fd-eb77-4a26-9273-36d28fe361e9","pickleStepId":"26fd0126-50ae-4b31-8a49-da82fbda8485","stepDefinitionIds":["f18c0754-057e-4834-98e5-719e5f1b2a75"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"anonymous","group":{"start":34,"value":"Sauce Labs Bolt T-Shirt"}},{"parameterTypeName":"anonymous","group":{"start":70,"value":"$15.99"}}]}]},{"id":"6915ad94-ca77-4abd-

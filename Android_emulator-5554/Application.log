@@ -1,0 +1,4 @@
+[Android_emulator-5554 INFO ] 2021-02-20 11:13:32.925 ServerManager:30 - Appium server started
+[Android_emulator-5554 INFO ] 2021-02-20 11:13:33.042 DriverManager:29 - initializing Appium driver
+[Android_emulator-5554 INFO ] 2021-02-20 11:13:33.097 PropertyManager:18 - loading config properties
+[Android_emulator-5554 INFO ] 2021-02-20 11:13:33.100 CapabilitiesManager:18 - getting capabilities

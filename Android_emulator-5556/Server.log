@@ -1,0 +1,64 @@
+2021-02-22 16:13:32:990 [Appium] Welcome to Appium v1.19.1
+2021-02-22 16:13:32:994 [Appium] Non-default server args:
+2021-02-22 16:13:32:995 [Appium]   port: 32444
+2021-02-22 16:13:32:996 [Appium]   sessionOverride: true
+2021-02-22 16:13:32:997 [Appium]   logFile: C:\Users\Lenovo\OneDrive\Documents\Automation Book\Framework\Android_emulator-5556\Server.log
+2021-02-22 16:13:33:104 [Appium] Appium REST http interface listener started on 0.0.0.0:32444
+2021-02-22 16:13:33:879 [HTTP] --> GET /wd/hub/status
+2021-02-22 16:13:33:880 [HTTP] {}
+2021-02-22 16:13:33:885 [GENERIC] Calling AppiumDriver.getStatus() with args: []
+2021-02-22 16:13:33:889 [GENERIC] Responding to client with driver.getStatus() result: {"build":{"version":"1.19.1"}}
+2021-02-22 16:13:33:906 [HTTP] <-- GET /wd/hub/status 200 21 ms - 68
+2021-02-22 16:13:33:906 [HTTP] 
+2021-02-22 16:13:33:918 [HTTP] --> GET /wd/hub/status
+2021-02-22 16:13:33:919 [HTTP] {}
+2021-02-22 16:13:33:921 [GENERIC] Calling AppiumDriver.getStatus() with args: []
+2021-02-22 16:13:33:923 [GENERIC] Responding to client with driver.getStatus() result: {"build":{"version":"1.19.1"}}
+2021-02-22 16:13:33:929 [HTTP] <-- GET /wd/hub/status 200 8 ms - 68
+2021-02-22 16:13:33:930 [HTTP] 
+2021-02-22 16:13:35:163 [HTTP] --> POST /wd/hub/session
+2021-02-22 16:13:35:165 [HTTP] {"desiredCapabilities":{"appActivity":"com.swaglabsmobileapp.SplashActivity","appPackage":"com.swaglabsmobileapp","automationName":"UiAutomator2","platformName":"Android","udid":"emulator-5556","deviceName":"emulator-5556","systemPort":"10001"},"capabilities":{"firstMatch":[{"appium:appActivity":"com.swaglabsmobileapp.SplashActivity","appium:appPackage":"com.swaglabsmobileapp","appium:automationName":"UiAutomator2","appium:deviceName":"emulator-5556","platformName":"android","appium:systemPort":"10001","appium:udid":"emulator-5556"}]}}
+2021-02-22 16:13:35:168 [W3C] Calling AppiumDriver.createSession() with args: [{"appActivity":"com.swaglabsmobileapp.SplashActivity","appPackage":"com.swaglabsmobileapp","automationName":"UiAutomator2","platformName":"Android","udid":"emulator-5556","deviceName":"emulator-5556","systemPort":"10001"},null,{"firstMatch":[{"appium:appActivity":"com.swaglabsmobileapp.SplashActivity","appium:appPackage":"com.swaglabsmobileapp","appium:automationName":"UiAutomator2","appium:deviceName":"emulator-5556","platformName":"android","appium:systemPort":"10001","appium:udid":"emulator-5556"}]}]
+2021-02-22 16:13:35:170 [BaseDriver] Event 'newSessionRequested' logged at 1614010415169 (21:43:35 GMT+0530 (India Standard Time))
+2021-02-22 16:13:37:355 [Appium] Appium v1.19.1 creating new AndroidUiautomator2Driver (v1.59.0) session
+2021-02-22 16:13:37:357 [Appium] There are no active sessions for cleanup
+2021-02-22 16:13:37:367 [BaseDriver] W3C capabilities and MJSONWP desired capabilities were provided
+2021-02-22 16:13:37:368 [BaseDriver] Creating session with W3C capabilities: {
+2021-02-22 16:13:37:369 [BaseDriver]   "alwaysMatch": {
+2021-02-22 16:13:37:370 [BaseDriver]     "platformName": "android",
+2021-02-22 16:13:37:370 [BaseDriver]     "appium:appActivity": "com.swaglabsmobileapp.SplashActivity",
+2021-02-22 16:13:37:371 [BaseDriver]     "appium:appPackage": "com.swaglabsmobileapp",
+2021-02-22 16:13:37:372 [BaseDriver]     "appium:automationName": "UiAutomator2",
+2021-02-22 16:13:37:372 [BaseDriver]     "appium:deviceName": "emulator-5556",
+2021-02-22 16:13:37:373 [BaseDriver]     "appium:systemPort": "10001",
+2021-02-22 16:13:37:373 [BaseDriver]     "appium:udid": "emulator-5556"
+2021-02-22 16:13:37:374 [BaseDriver]   },
+2021-02-22 16:13:37:375 [BaseDriver]   "firstMatch": [
+2021-02-22 16:13:37:375 [BaseDriver]     {}
+2021-02-22 16:13:37:376 [BaseDriver]   ]
+2021-02-22 16:13:37:377 [BaseDriver] }
+2021-02-22 16:13:37:389 [BaseDriver] Number capability passed in as string. Functionality may be compromised.
+2021-02-22 16:13:37:416 [BaseDriver] Capability 'systemPort' changed from string ('10001') to integer (10001). This may cause unexpected behavior
+2021-02-22 16:13:37:442 [BaseDriver] Session created with session id: 18bdbc70-981a-4167-8942-50988af5edde
+2021-02-22 16:13:37:462 [UiAutomator2] Starting 'com.swaglabsmobileapp' directly on the device
+2021-02-22 16:13:37:583 [ADB] Found 2 'build-tools' folders under 'C:\Users\Lenovo\AppData\Local\Android\Sdk' (newest first):
+2021-02-22 16:13:37:584 [ADB]     C:/Users/Lenovo/AppData/Local/Android/Sdk/build-tools/30.0.3
+2021-02-22 16:13:37:585 [ADB]     C:/Users/Lenovo/AppData/Local/Android/Sdk/build-tools/30.0.2
+2021-02-22 16:13:37:587 [ADB] Using 'adb.exe' from 'C:\Users\Lenovo\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+2021-02-22 16:13:37:589 [ADB] Running 'C:\Users\Lenovo\AppData\Local\Android\Sdk\platform-tools\adb.exe -P 5037 start-server'
+2021-02-22 16:13:37:729 [AndroidDriver] Retrieving device list
+2021-02-22 16:13:37:730 [ADB] Trying to find a connected android device
+2021-02-22 16:13:37:733 [ADB] Getting connected devices
+2021-02-22 16:13:38:047 [ADB] Connected devices: [{"udid":"730cc295","state":"device"},{"udid":"emulator-5554","state":"device"}]
+2021-02-22 16:13:38:048 [AndroidDriver] Device emulator-5556 was not in the list of connected devices
+2021-02-22 16:13:38:050 [UiAutomator2] Deleting UiAutomator2 session
+2021-02-22 16:13:38:054 [BaseDriver] Event 'newSessionStarted' logged at 1614010418054 (21:43:38 GMT+0530 (India Standard Time))
+2021-02-22 16:13:38:408 [W3C] Encountered internal error running command: Error: Device emulator-5556 was not in the list of connected devices
+2021-02-22 16:13:38:409 [W3C]     at Object.errorAndThrow (C:\Users\Lenovo\AppData\Roaming\npm\node_modules\appium\node_modules\appium-support\lib\logging.js:94:35)
+2021-02-22 16:13:38:411 [W3C]     at Object.getDeviceInfoFromCaps (C:\Users\Lenovo\AppData\Roaming\npm\node_modules\appium\node_modules\appium-android-driver\lib\android-helpers.js:210:16)
+2021-02-22 16:13:38:412 [W3C]     at AndroidUiautomator2Driver.startUiAutomator2Session (C:\Users\Lenovo\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-driver\lib\driver.js:327:26)
+2021-02-22 16:13:38:413 [W3C]     at AndroidUiautomator2Driver.createSession (C:\Users\Lenovo\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-driver\lib\driver.js:224:7)
+2021-02-22 16:13:38:413 [W3C]     at AppiumDriver.createSession (C:\Users\Lenovo\AppData\Roaming\npm\node_modules\appium\lib\appium.js:366:35)
+2021-02-22 16:13:38:459 [W3C] Destroying socket connection
+2021-02-22 16:13:38:462 [HTTP] <-- POST /wd/hub/session 500 3296 ms - 685
+2021-02-22 16:13:38:463 [HTTP] 
