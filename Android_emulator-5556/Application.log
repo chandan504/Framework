@@ -1,4 +1,1 @@
-[Android_emulator-5556 INFO ] 2021-02-22 21:43:24.799 ServerManager:21 - starting appium server
-[Android_emulator-5556 INFO ] 2021-02-22 21:43:33.927 ServerManager:30 - Appium server started
-[Android_emulator-5556 INFO ] 2021-02-22 21:43:33.928 DriverManager:29 - initializing Appium driver
-[Android_emulator-5556 INFO ] 2021-02-22 21:43:33.930 CapabilitiesManager:18 - getting capabilities
+[Android_emulator-5556 INFO ] 2021-03-01 23:45:39.968 ServerManager:21 - starting appium server
